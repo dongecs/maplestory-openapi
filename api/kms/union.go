@@ -1,6 +1,6 @@
 package kms
 
-import "maplestory-openapi/api/tms"
+import "github.com/dongecs/maplestory-openapi/api/tms"
 
 // Union payloads (plus champion info).
 type (

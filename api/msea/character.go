@@ -1,6 +1,6 @@
 package msea
 
-import "maplestory-openapi/api/tms"
+import "github.com/dongecs/maplestory-openapi/api/tms"
 
 // Re-export character-related structures from TMS since payloads match.
 type (

@@ -1,6 +1,6 @@
 package tms
 
-import "maplestory-openapi/api/common"
+import "github.com/dongecs/maplestory-openapi/api/common"
 
 // Region-wide constants.
 const (

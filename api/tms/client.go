@@ -10,7 +10,7 @@ import (
 	"net/url"
 	"strconv"
 
-	"maplestory-openapi/api/common"
+	"github.com/dongecs/maplestory-openapi/api/common"
 )
 
 // Client is the MapleStory OpenAPI client for the TMS region.

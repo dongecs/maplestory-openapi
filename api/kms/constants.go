@@ -1,6 +1,6 @@
 package kms
 
-import "maplestory-openapi/api/common"
+import "github.com/dongecs/maplestory-openapi/api/common"
 
 const (
 	subPath          = "maplestory"

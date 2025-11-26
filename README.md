@@ -5,8 +5,7 @@
 ## Getting Started
 
 ```bash
-cd go
-go test ./...
+go get github.com/dongecs/maplestory-openapi@latest
 ```
 
 ## Usage Snapshot
@@ -18,7 +17,7 @@ import (
 	"context"
 	"fmt"
 
-	"maplestory-openapi/api/tms"
+	"github.com/dongecs/maplestory-openapi/api/tms"
 )
 
 const (

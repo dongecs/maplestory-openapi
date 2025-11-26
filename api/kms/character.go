@@ -1,6 +1,6 @@
 package kms
 
-import "maplestory-openapi/api/tms"
+import "github.com/dongecs/maplestory-openapi/api/tms"
 
 // Shared character-related structures (payloads match TMS with additional KMS-only fields elsewhere).
 type (
