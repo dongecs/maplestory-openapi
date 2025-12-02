@@ -18,6 +18,8 @@ type Client struct {
 	*common.Client
 }
 
+var _ common.MapleClient = (*Client)(nil)
+
 // NewClient constructs a MSEA client with the given API key.
 func NewClient(apiKey string) *Client {
 	loc := common.FixedOffsetLocation(timezoneOffset)

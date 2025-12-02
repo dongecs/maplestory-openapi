@@ -18,6 +18,8 @@ type Client struct {
 	*common.Client
 }
 
+var _ common.MapleClient = (*Client)(nil)
+
 // NewClient constructs a TMS client with the given API key.
 func NewClient(apiKey string) *Client {
 	loc := common.FixedOffsetLocation(timezoneOffset)
@@ -27,17 +29,7 @@ func NewClient(apiKey string) *Client {
 }
 
 // CharacterImageOptions defines rendering options for character images.
-type CharacterImageOptions struct {
-	Action       common.CharacterImageAction
-	Emotion      common.CharacterImageEmotion
-	WeaponMotion common.CharacterImageWeaponMotion
-	ActionFrame  int
-	EmotionFrame int
-	Width        int
-	Height       int
-	X            *int
-	Y            *int
-}
+type CharacterImageOptions = common.CharacterImageOptions
 
 // GetCharacter retrieves the ocid for a character name.
 func (c *Client) GetCharacter(ctx context.Context, characterName string) (*Character, error) {

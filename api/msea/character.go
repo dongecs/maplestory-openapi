@@ -1,9 +1,6 @@
 package msea
 
-import (
-	"github.com/dongecs/maplestory-openapi/api/common"
-	"github.com/dongecs/maplestory-openapi/api/tms"
-)
+import "github.com/dongecs/maplestory-openapi/api/common"
 
 // Re-export character-related structures from TMS since payloads match.
 type (
@@ -71,4 +68,4 @@ type (
 )
 
 // CharacterImageOptions mirrors tms rendering options.
-type CharacterImageOptions = tms.CharacterImageOptions
+type CharacterImageOptions = common.CharacterImageOptions

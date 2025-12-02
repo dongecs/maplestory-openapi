@@ -2,7 +2,6 @@ package kms
 
 import (
 	"github.com/dongecs/maplestory-openapi/api/common"
-	"github.com/dongecs/maplestory-openapi/api/tms"
 )
 
 // Shared character-related structures (payloads match TMS with additional KMS-only fields elsewhere).
@@ -71,7 +70,7 @@ type (
 )
 
 // CharacterImageOptions mirrors rendering options.
-type CharacterImageOptions = tms.CharacterImageOptions
+type CharacterImageOptions = common.CharacterImageOptions
 
 // CharacterList holds account-linked characters.
 type CharacterList struct {

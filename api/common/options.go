@@ -1,10 +1,15 @@
 package common
 
 // CharacterImageOptions defines the available options for generating character images.
+// Zero values use server defaults; X and Y act as optional offsets.
 type CharacterImageOptions struct {
-	Action       CharacterImageAction       `json:"action,omitempty"`
-	Emotion      CharacterImageEmotion      `json:"emotion,omitempty"`
-	WeaponMotion CharacterImageWeaponMotion `json:"wmotion,omitempty"`
-	ActionFrame  *int                       `json:"action_frame,omitempty"`
-	EmotionFrame *int                       `json:"emotion_frame,omitempty"`
+	Action       CharacterImageAction
+	Emotion      CharacterImageEmotion
+	WeaponMotion CharacterImageWeaponMotion
+	ActionFrame  int
+	EmotionFrame int
+	Width        int
+	Height       int
+	X            *int
+	Y            *int
 }
