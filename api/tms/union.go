@@ -1,79 +1,17 @@
 package tms
 
-// Union represents base union info.
-type Union struct {
-	Date               *string `json:"date"`
-	UnionLevel         *int    `json:"union_level"`
-	UnionGrade         *string `json:"union_grade"`
-	UnionArtifactLevel *int    `json:"union_artifact_level"`
-	UnionArtifactExp   *int    `json:"union_artifact_exp"`
-	UnionArtifactPoint *int    `json:"union_artifact_point"`
-}
+import "github.com/dongecs/maplestory-openapi/api/common"
 
-// UnionRaider represents union raider configurations.
-type UnionRaider struct {
-	Date               *string                `json:"date"`
-	UnionRaiderStat    []string               `json:"union_raider_stat"`
-	UnionOccupiedStat  []string               `json:"union_occupied_stat"`
-	UnionInnerStat     []UnionRaiderInnerStat `json:"union_inner_stat"`
-	UnionBlock         []UnionRaiderBlock     `json:"union_block"`
-	UsePresetNo        int                    `json:"use_preset_no"`
-	UnionRaiderPreset1 *UnionRaiderPreset     `json:"union_raider_preset_1"`
-	UnionRaiderPreset2 *UnionRaiderPreset     `json:"union_raider_preset_2"`
-	UnionRaiderPreset3 *UnionRaiderPreset     `json:"union_raider_preset_3"`
-	UnionRaiderPreset4 *UnionRaiderPreset     `json:"union_raider_preset_4"`
-	UnionRaiderPreset5 *UnionRaiderPreset     `json:"union_raider_preset_5"`
-}
-
-type UnionRaiderInnerStat struct {
-	StatFieldID     string `json:"stat_field_id"`
-	StatFieldEffect string `json:"stat_field_effect"`
-}
-
-type UnionRaiderBlock struct {
-	BlockType         string                       `json:"block_type"`
-	BlockClass        *string                      `json:"block_class"`
-	BlockLevel        string                       `json:"block_level"`
-	BlockControlPoint UnionRaiderBlockControlPoint `json:"block_control_point"`
-	BlockPosition     []UnionRaiderBlockPosition   `json:"block_position"`
-}
-
-type UnionRaiderBlockControlPoint struct {
-	X int `json:"x"`
-	Y int `json:"y"`
-}
-
-type UnionRaiderBlockPosition struct {
-	X int `json:"x"`
-	Y int `json:"y"`
-}
-
-type UnionRaiderPreset struct {
-	UnionRaiderStat   []string               `json:"union_raider_stat"`
-	UnionOccupiedStat []string               `json:"union_occupied_stat"`
-	UnionInnerStat    []UnionRaiderInnerStat `json:"union_inner_stat"`
-	UnionBlock        []UnionRaiderBlock     `json:"union_block"`
-}
-
-// UnionArtifact represents artifact info.
-type UnionArtifact struct {
-	Date                  *string                `json:"date"`
-	UnionArtifactEffect   []UnionArtifactEffect  `json:"union_artifact_effect"`
-	UnionArtifactCrystal  []UnionArtifactCrystal `json:"union_artifact_crystal"`
-	UnionArtifactRemainAP *int                   `json:"union_artifact_remain_ap"`
-}
-
-type UnionArtifactEffect struct {
-	Name  string `json:"name"`
-	Level int    `json:"level"`
-}
-
-type UnionArtifactCrystal struct {
-	Name               string `json:"name"`
-	ValidityFlag       string `json:"validity_flag"`
-	DateExpire         string `json:"date_expire"`
-	Level              int    `json:"level"`
-	CrystalOptionName1 string `json:"crystal_option_name_1"`
-	CrystalOptionName2 string `json:"crystal_option_name_2"`
-	CrystalOptionName3 string `json:"crystal_option_name_3"`
-}
+// Union payloads shared across regions; re-exported for the TMS package.
+type (
+	Union                        = common.Union
+	UnionRaider                  = common.UnionRaider
+	UnionRaiderInnerStat         = common.UnionRaiderInnerStat
+	UnionRaiderBlock             = common.UnionRaiderBlock
+	UnionRaiderBlockControlPoint = common.UnionRaiderBlockControlPoint
+	UnionRaiderBlockPosition     = common.UnionRaiderBlockPosition
+	UnionRaiderPreset            = common.UnionRaiderPreset
+	UnionArtifact                = common.UnionArtifact
+	UnionArtifactEffect          = common.UnionArtifactEffect
+	UnionArtifactCrystal         = common.UnionArtifactCrystal
+)

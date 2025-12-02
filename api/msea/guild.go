@@ -1,10 +1,10 @@
 package msea
 
-import "github.com/dongecs/maplestory-openapi/api/tms"
+import "github.com/dongecs/maplestory-openapi/api/common"
 
 // Re-export guild structures.
 type (
-	Guild      = tms.Guild
-	GuildBasic = tms.GuildBasic
-	GuildSkill = tms.GuildSkill
+	Guild      = common.Guild
+	GuildBasic = common.GuildBasic
+	GuildSkill = common.GuildSkill
 )

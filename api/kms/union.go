@@ -1,19 +1,19 @@
 package kms
 
-import "github.com/dongecs/maplestory-openapi/api/tms"
+import "github.com/dongecs/maplestory-openapi/api/common"
 
 // Union payloads (plus champion info).
 type (
-	Union                        = tms.Union
-	UnionRaider                  = tms.UnionRaider
-	UnionRaiderInnerStat         = tms.UnionRaiderInnerStat
-	UnionRaiderBlock             = tms.UnionRaiderBlock
-	UnionRaiderBlockControlPoint = tms.UnionRaiderBlockControlPoint
-	UnionRaiderBlockPosition     = tms.UnionRaiderBlockPosition
-	UnionRaiderPreset            = tms.UnionRaiderPreset
-	UnionArtifact                = tms.UnionArtifact
-	UnionArtifactEffect          = tms.UnionArtifactEffect
-	UnionArtifactCrystal         = tms.UnionArtifactCrystal
+	Union                        = common.Union
+	UnionRaider                  = common.UnionRaider
+	UnionRaiderInnerStat         = common.UnionRaiderInnerStat
+	UnionRaiderBlock             = common.UnionRaiderBlock
+	UnionRaiderBlockControlPoint = common.UnionRaiderBlockControlPoint
+	UnionRaiderBlockPosition     = common.UnionRaiderBlockPosition
+	UnionRaiderPreset            = common.UnionRaiderPreset
+	UnionArtifact                = common.UnionArtifact
+	UnionArtifactEffect          = common.UnionArtifactEffect
+	UnionArtifactCrystal         = common.UnionArtifactCrystal
 )
 
 type UnionChampion struct {
