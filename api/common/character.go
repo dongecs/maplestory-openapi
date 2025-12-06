@@ -21,6 +21,7 @@ type CharacterBasic struct {
 	CharacterDateCreate  *string `json:"character_date_create"`
 	AccessFlag           string  `json:"access_flag"`
 	LiberationQuestClear string  `json:"liberation_quest_clear"`
+	LiberationQuestClearFlag string  `json:"liberation_quest_clear_flag"`
 }
 
 // CharacterImage describes the rendered character image variants.
