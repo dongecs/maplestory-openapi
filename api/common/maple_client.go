@@ -2,7 +2,7 @@ package common
 
 import "context"
 
-// MapleClient defines the shared region client surface for character/union/guild APIs.
+// MapleClient defines the shared region client surface for character/union/guild/ranking APIs.
 type MapleClient interface {
 	GetCharacter(ctx context.Context, characterName string) (*Character, error)
 	GetCharacterBasic(ctx context.Context, ocid string, date any) (*CharacterBasic, error)
@@ -30,4 +30,11 @@ type MapleClient interface {
 	GetUnionArtifact(ctx context.Context, ocid string, date any) (*UnionArtifact, error)
 	GetGuild(ctx context.Context, guildName, worldName string) (*Guild, error)
 	GetGuildBasic(ctx context.Context, guildID string, date any) (*GuildBasic, error)
+	GetOverallRanking(ctx context.Context, filter *RankingFilter, date any) (*OverallRankingResponse, error)
+	GetUnionRanking(ctx context.Context, filter *RankingFilter, date any) (*UnionRankingResponse, error)
+	GetGuildRanking(ctx context.Context, filter *RankingFilter, date any) (*GuildRankingResponse, error)
+	GetDojangRanking(ctx context.Context, filter *RankingFilter, date any) (*DojangRankingResponse, error)
+	GetSeedRanking(ctx context.Context, filter *RankingFilter, date any) (*SeedRankingResponse, error)
+	GetAchievementRanking(ctx context.Context, filter *RankingFilter, date any) (*AchievementRankingResponse, error)
+
 }

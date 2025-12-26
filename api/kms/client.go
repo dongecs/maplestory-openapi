@@ -363,15 +363,6 @@ func (c *Client) GetStarforceHistory(ctx context.Context, count int, opts *Histo
 
 // Ranking
 
-type RankingFilter struct {
-	WorldName      string
-	WorldType      string
-	CharacterClass string
-	OCID           string
-	Page           string
-	Region         string
-}
-
 func (c *Client) GetOverallRanking(ctx context.Context, filter *RankingFilter, date any) (*OverallRankingResponse, error) {
 	query := map[string]string{"date": c.dateOrEmpty(date)}
 	applyFilter(query, filter)

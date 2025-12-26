@@ -450,6 +450,32 @@ func (c *Client) GetGuildBasic(ctx context.Context, guildID string, date any) (*
 	})
 }
 
+// Ranking (unsupported)
+
+func (c *Client) GetOverallRanking(ctx context.Context, filter *common.RankingFilter, date any) (*common.OverallRankingResponse, error) {
+	return nil, fmt.Errorf("ranking endpoints are not supported for TMS")
+}
+
+func (c *Client) GetUnionRanking(ctx context.Context, filter *common.RankingFilter, date any) (*common.UnionRankingResponse, error) {
+	return nil, fmt.Errorf("ranking endpoints are not supported for TMS")
+}
+
+func (c *Client) GetGuildRanking(ctx context.Context, filter *common.RankingFilter, date any) (*common.GuildRankingResponse, error) {
+	return nil, fmt.Errorf("ranking endpoints are not supported for TMS")
+}
+
+func (c *Client) GetDojangRanking(ctx context.Context, filter *common.RankingFilter, date any) (*common.DojangRankingResponse, error) {
+	return nil, fmt.Errorf("ranking endpoints are not supported for TMS")
+}
+
+func (c *Client) GetSeedRanking(ctx context.Context, filter *common.RankingFilter, date any) (*common.SeedRankingResponse, error) {
+	return nil, fmt.Errorf("ranking endpoints are not supported for TMS")
+}
+
+func (c *Client) GetAchievementRanking(ctx context.Context, filter *common.RankingFilter, date any) (*common.AchievementRankingResponse, error) {
+	return nil, fmt.Errorf("ranking endpoints are not supported for TMS")
+}
+
 // fetchWithEmpty fetches into T and returns nil when the response is effectively empty.
 func fetchWithEmpty[T any](ctx context.Context, c *Client, path string, query map[string]string) (*T, error) {
 	raw, err := c.fetchRaw(ctx, path, query)

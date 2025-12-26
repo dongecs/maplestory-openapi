@@ -1,15 +1,12 @@
 package kms
 
-import "encoding/json"
+import "github.com/dongecs/maplestory-openapi/api/common"
 
-// RankingResponse keeps ranking list raw to avoid duplicating every DTO.
-type RankingResponse struct {
-	Ranking json.RawMessage `json:"ranking"`
-}
-
-type OverallRankingResponse = RankingResponse
-type UnionRankingResponse = RankingResponse
-type GuildRankingResponse = RankingResponse
-type DojangRankingResponse = RankingResponse
-type SeedRankingResponse = RankingResponse
-type AchievementRankingResponse = RankingResponse
+type RankingResponse = common.RankingResponse
+type OverallRankingResponse = common.OverallRankingResponse
+type UnionRankingResponse = common.UnionRankingResponse
+type GuildRankingResponse = common.GuildRankingResponse
+type DojangRankingResponse = common.DojangRankingResponse
+type SeedRankingResponse = common.SeedRankingResponse
+type AchievementRankingResponse = common.AchievementRankingResponse
+type RankingFilter = common.RankingFilter
