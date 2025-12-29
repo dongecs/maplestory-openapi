@@ -14,4 +14,7 @@ type (
 	UnionArtifact                = common.UnionArtifact
 	UnionArtifactEffect          = common.UnionArtifactEffect
 	UnionArtifactCrystal         = common.UnionArtifactCrystal
+	UnionChampion                = common.UnionChampion
+	UnionChampionInfo            = common.UnionChampionInfo
+	UnionChampionBadgeInfo       = common.UnionChampionBadgeInfo
 )

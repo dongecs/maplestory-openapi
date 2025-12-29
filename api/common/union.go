@@ -77,3 +77,22 @@ type UnionArtifactCrystal struct {
 	CrystalOptionName2 string `json:"crystal_option_name_2"`
 	CrystalOptionName3 string `json:"crystal_option_name_3"`
 }
+
+// UnionChampion represents union champion info.
+type UnionChampion struct {
+	Date                   string                   `json:"date"`
+	UnionChampion          []UnionChampionInfo      `json:"union_champion"`
+	ChampionBadgeTotalInfo []UnionChampionBadgeInfo `json:"champion_badge_total_info"`
+}
+
+type UnionChampionInfo struct {
+	ChampionName      string                   `json:"champion_name"`
+	ChampionSlot      int                      `json:"champion_slot"`
+	ChampionGrade     string                   `json:"champion_grade"`
+	ChampionClass     string                   `json:"champion_class"`
+	ChampionBadgeInfo []UnionChampionBadgeInfo `json:"champion_badge_info"`
+}
+
+type UnionChampionBadgeInfo struct {
+	Stat string `json:"stat"`
+}

@@ -28,6 +28,7 @@ type MapleClient interface {
 	GetUnion(ctx context.Context, ocid string, date any) (*Union, error)
 	GetUnionRaider(ctx context.Context, ocid string, date any) (*UnionRaider, error)
 	GetUnionArtifact(ctx context.Context, ocid string, date any) (*UnionArtifact, error)
+	GetUnionChampion(ctx context.Context, ocid string, date any) (*UnionChampion, error)
 	GetGuild(ctx context.Context, guildName, worldName string) (*Guild, error)
 	GetGuildBasic(ctx context.Context, guildID string, date any) (*GuildBasic, error)
 	GetOverallRanking(ctx context.Context, filter *RankingFilter, date any) (*OverallRankingResponse, error)

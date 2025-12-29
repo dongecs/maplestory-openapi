@@ -414,6 +414,18 @@ func (c *Client) GetUnionArtifact(ctx context.Context, ocid string, date any) (*
 	})
 }
 
+// GetUnionChampion fetches union champion information.
+func (c *Client) GetUnionChampion(ctx context.Context, ocid string, date any) (*UnionChampion, error) {
+	dateStr, err := c.toDateString(date)
+	if err != nil {
+		return nil, err
+	}
+	return fetchWithEmpty[UnionChampion](ctx, c, "v1/user/union-champion", map[string]string{
+		"ocid": ocid,
+		"date": dateStr,
+	})
+}
+
 // GetGuild fetches guild id by name/world.
 func (c *Client) GetGuild(ctx context.Context, guildName, worldName string) (*Guild, error) {
 	raw, err := c.fetchRaw(ctx, "v1/guild/id", map[string]string{
